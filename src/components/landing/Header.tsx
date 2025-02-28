@@ -1,7 +1,7 @@
 import headerImage from "@/assets/images/general/bg-header.svg";
 import Image from "next/image";
 
-const Header = () => (
+const Header: React.FC = () => (
     <section>
         <div className="bg-black py-3">
             <p className="text-white text-center font-medium">Instant Delivery is now available in Semarang area. Free shipping for standard delivery.</p>
