@@ -1,4 +1,3 @@
-import headerImage from "@/assets/images/general/bg-header.svg";
 import Image from "next/image";
 
 const Header: React.FC = () => (
@@ -7,7 +6,7 @@ const Header: React.FC = () => (
             <p className="text-white text-center font-medium">Instant Delivery is now available in Semarang area. Free shipping for standard delivery.</p>
         </div>
         <div className="relative">
-            <Image className="w-full h-auto object-cover" src={headerImage} alt="Header Image" loading="lazy"/>
+            <Image className="w-full h-auto object-cover" src="/images/general/bg-header.svg" alt="Header Image" loading="lazy" width={0} height={0}/>
             <div className="absolute inset-0 px-20">
                 <h1 className="m-0 font-bold text-white text-[176px]">SERINITY</h1>
                 <div className="mt-56 flex justify-between text-white gap-x-32">
