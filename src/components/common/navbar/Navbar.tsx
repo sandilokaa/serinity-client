@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     return (
         <nav className=" text-black py-5 px-20 flex justify-between items-center">
             <Link href="/" className="text-[28px] font-bold">SERINITY</Link>

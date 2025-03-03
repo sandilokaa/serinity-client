@@ -1,3 +1,5 @@
+"use client";
+
 const Item: React.FC = () => {
     return (
         <div className="mt-24">

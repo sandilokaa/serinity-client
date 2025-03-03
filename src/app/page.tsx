@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/landing/Header";
 import Category from "@/components/landing/Category";
 import Item from "@/components/landing/Item";
