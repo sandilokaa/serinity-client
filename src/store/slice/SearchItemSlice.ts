@@ -24,15 +24,15 @@ export const fetchData = createAsyncThunk<Item[], FetchDataParams>(
     "/data/fetchData",
     async ({ name, category }) => {
         try {
-        const response = await axios.get(
-            `http://localhost:8080/api/v1/items?` +
-            (category ? `category=${category}` : "") +
-            (name ? `&name=${name}` : "")
-        );
-        return response.data.data;
+            const response = await axios.get(
+                `http://localhost:8080/api/v1/items?` +
+                (category ? `category=${category}` : "") +
+                (name ? `&name=${name}` : "")
+            );
+            return response.data.data;
         } catch (error: any) {
-        console.error("API Error:", error.message);
-        throw error;
+            console.error("API Error:", error.message);
+            throw error;
         }
     }
 );
