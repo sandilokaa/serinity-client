@@ -1,3 +1,5 @@
+'use client';
+
 import { CategoryTypeData } from "@/data/category";
 import type { Category } from "@/data/category";
 import Image from "next/image";
