@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Providers } from "./providers";
 import Navbar from "@/components/common/navbar/Navbar";
 import Footer from "@/components/common/footer/Footer";
 import "../styles/globals.css";
@@ -18,9 +19,11 @@ export default function RootLayout({
       <body
         className="flex flex-col min-h-screen"
       >
-        <Navbar/>
-        <main>{children}</main>
-        <Footer/>
+        <Providers>
+          <Navbar/>
+          <main>{children}</main>
+          <Footer/>
+        </Providers>
       </body>
     </html>
   );
