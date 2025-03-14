@@ -12,6 +12,8 @@ interface Item {
     name: string;
     category: string;
     price: number;
+    sale: boolean;
+    images: {image_url: string}[];
 }
 
 interface SearchItemState {
