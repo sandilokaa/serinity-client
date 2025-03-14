@@ -1,5 +1,7 @@
 "use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import ButtonSubmit from "../button/ButtonSubmit";
 import SubscribeInput from "../input/SubscribeInput";
 
@@ -38,13 +40,13 @@ const Footer: React.FC = () => {
                                 <p className="font-bold">HOT CATEGORIES</p>
                             </div>
                             <div className="flex flex-col gap-y-[10px]">
-                                <p>Special Offers</p>
-                                <p>T-Shirt Collection</p>
-                                <p>Headwear</p>
-                                <p>Hoodies</p>
-                                <p>Bottoms</p>
-                                <p>Bags</p>
-                                <p>Accessories</p>
+                                <Link href="/">Special Offers</Link>
+                                <Link href="/">T-Shirt Collection</Link>
+                                <Link href="/">Headwear</Link>
+                                <Link href="/">Hoodies</Link>
+                                <Link href="/">Bottoms</Link>
+                                <Link href="/">Bags</Link>
+                                <Link href="/">Accessories</Link>
                             </div>
                         </div>
                         <div className="flex flex-col gap-y-5 text-sm">
@@ -52,9 +54,9 @@ const Footer: React.FC = () => {
                                 <p className="font-bold">CUSTOMER SERVICE</p>
                             </div>
                             <div className="flex flex-col gap-y-[10px]">
-                                <p>Privacy Policy</p>
-                                <p>Term & Conditions</p>
-                                <p>Store Locations</p>
+                                <Link href="/">Privacy Policy</Link>
+                                <Link href="/">Term & Conditions</Link>
+                                <Link href="/">Store Locations</Link>
                             </div>
                         </div>
                         <div className="flex flex-col gap-y-5 text-sm">
