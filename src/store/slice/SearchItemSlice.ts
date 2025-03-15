@@ -4,7 +4,7 @@ import axios from "axios";
 
 interface FetchDataParams {
     name?: string;
-    category?: string;
+    category?: string | null;
 }
 
 interface Item {
@@ -25,6 +25,7 @@ interface SearchItemState {
 export const fetchData = createAsyncThunk<Item[], FetchDataParams>(
     "/data/fetchData",
     async ({ name, category }) => {
+        if (!name?.trim()) return [];
         try {
             const response = await axios.get(
                 `http://localhost:8080/api/v1/items?` +
