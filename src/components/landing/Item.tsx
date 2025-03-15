@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { AppDispatch } from "@/store/store";
-import { fetchData, selectSearchItemProducts, selectSearchItemProductsStatus } from "@/store/slice/SearchItemSlice";
+import { fetchData, selectNewArrivalProducts, selectNewArrivalProductsStatus } from "@/store/slice/NewArrivalSlice";
 
 import CurrencyFormatter from "@/utils/CurrencyFormatter";
 
@@ -15,8 +15,8 @@ const Item: React.FC = () => {
     const [imageHovered, setImageHovered] = useState<{ [key: number]: boolean }>({});
     const [filledStatus, setFilledStatus] = useState<{ [key: number]: boolean }>({});
 
-    const items = useSelector(selectSearchItemProducts);
-    const status = useSelector(selectSearchItemProductsStatus);
+    const items = useSelector(selectNewArrivalProducts);
+    const status = useSelector(selectNewArrivalProductsStatus);
 
     useEffect(() => {
         dispatch(fetchData({ name: "", category: "" }));
@@ -49,7 +49,10 @@ const Item: React.FC = () => {
                     {status === "failed" && <p>Failed to fetch data</p>}
                     <div className="grid grid-cols-4 justify-between gap-y-10 gap-x-5">
                         {items.length > 0 ? (
-                            items.slice(0, 4).map((product) => {
+                            items
+                            .filter((item) => item.new_arrival)
+                            .slice(0, 8)
+                            .map((product) => {
                                 const hovered = imageHovered[product.id];
                                 const imageUrl =
                                     product.images.length > 0
