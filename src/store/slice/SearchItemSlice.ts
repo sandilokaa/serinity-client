@@ -13,6 +13,7 @@ interface Item {
     category: string;
     price: number;
     sale: boolean;
+    new_arrival: boolean;
     images: {image_url: string}[];
 }
 
