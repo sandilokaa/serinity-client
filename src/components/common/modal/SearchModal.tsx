@@ -89,10 +89,10 @@ const SearchModal: React.FC<SearchModalProps> = ({ onClose }) => {
                     {status === "succeeded" && products.length > 0 && (
                         <div className="grid grid-cols-2 gap-5">
                             {products.map((product) => {
-                                // const imageUrl = product.images.length > 0 ? product.images[0]?.image_url : "";
+                                const imageUrl = product.images.length > 0 ? product.images[0]?.image_url : "";
                                 return (
                                     <div key={product.id} className="flex flex-col gap-y-[10px] cursor-pointer">
-                                        {/* <Image src={`http://localhost:8080/${imageUrl}`} alt="img" loading="lazy" className="w-full" /> */}
+                                        <Image src={`http://localhost:8080/${imageUrl}`} alt="img" loading="lazy" className="w-full" width={50} height={50}/>
                                         <div className="flex flex-col text-center gap-y-[5px]">
                                             <p className="font-medium text-sm">{product.name}</p>
                                             {product.sale ? (
